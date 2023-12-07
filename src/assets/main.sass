@@ -1,0 +1,67 @@
+$primary-color: #993955
+$dark-color: #011638
+$light-color: #CDCDCD
+$lighter-color: #DFF8EB
+$success-color: #214E34
+
+$primary-font-family: 'Roboto', sans-serif
+
+.full-center-container
+  display: flex
+  flex-direction: column
+  position: absolute
+  left: 0px
+  right: 0px
+  top: 50px
+  bottom: 0px
+  text-align: center
+  align-items: center
+  align-content: center
+  justify-content: center
+  background-color: $primary-color
+
+.light-btn
+  background-color: $light-color
+  color: $dark-color
+  border: 1px solid $dark-color
+  border-radius: 5px
+  padding: 5px
+  margin: 5px
+  cursor: pointer
+  &:hover
+    background-color: $dark-color
+    color: $light-color
+
+h1
+  font-family: $primary-font-family
+  color: $light-color
+  font-size: 2em
+  margin: 0px
+  padding: 0px
+
+@mixin box-shadow($top, $left, $blur, $size, $color)
+  -webkit-box-shadow: $top $left $blur $size $color
+  -moz-box-shadow: $top $left $blur $size $color
+  box-shadow: $top $left $blur $size $color
+
+.headnav
+  background-color: $dark-color
+  color: $light-color
+  height: 50px
+  position: absolute
+  left: 0px
+  right: 0px
+  top: 0px
+  display: flex
+  flex-direction: row
+  align-items: center
+  filter: drop-shadow(0 0 0.1rem $dark-color)
+
+.headnav-link
+  font-family: $primary-font-family
+  color: $light-color
+  text-decoration: none
+  padding: 5px
+  margin: 5px
+  &:hover
+    color: $lighter-color
