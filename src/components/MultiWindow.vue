@@ -15,6 +15,8 @@ let translateX = ref(0);
 let translateY = ref(0);
 
 onBeforeMount(() => {
+  videoWidth.value = window.screen.availWidth;
+  videoHeight.value = window.screen.availHeight;
   initCamera()
 });
 
@@ -32,8 +34,6 @@ onBeforeUnmount(() => {
 const initCamera = async () => {
   try {
     await navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
-      videoWidth.value = window.screen.availWidth;
-      videoHeight.value = window.screen.availHeight;
       videoStream.value = stream;
     })
   } catch (error) {
